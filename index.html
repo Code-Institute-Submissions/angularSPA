@@ -5,7 +5,7 @@
 
 <head>
   <!-- <meta charset="utf-8">this stops the animation?? -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
   <!-- SCROLLS -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -37,20 +37,24 @@
         <a class="navbar-brand" href="#/home">My Window Cleaner 0203 394 0044</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-left">
         <li class="active"><a href="#home"><i class="fa fa-home"></i> Home</a></li>
         <!-- must have href="#home" not href="#" or the transition won't work properly -->
-        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+        <li><a href="#prices"></i>Prices</a></li>
+        <li><a href="#workwithus"></i>Work With Us</a></li>
+        <li><a href="#contact"></i>Contact</a></li>
       </ul>
       </div>
     </div>
   </nav>
-   <div id="main">  
+  <div id="main">  
       <!-- angular templating -->
       <!-- this is where content will be injected -->
-      <div ng-view class="page {{ pageClass }}"></div>    
-    </div>  
+      <div ng-view class="page {{ pageClass }}">
+        <div ng-include="templates/home.html"></div>
+      </div>    
+  </div>  
+
 </body>
 
 </html>

@@ -6,15 +6,27 @@
     $routeProvider
 
       // route for the home page
+      .when('/', {
+        templateUrl : 'templates/home.html',
+        controller  : 'mainController'
+      })
+
+      // route for the home page
       .when('/home', {
         templateUrl : 'templates/home.html',
         controller  : 'mainController'
       })
 
-      // route for the about page
-      .when('/about', {
-        templateUrl : 'templates/about.html',
-        controller  : 'aboutController'
+      // route for the prices page
+      .when('/prices', {
+        templateUrl : 'templates/prices.html',
+        controller  : 'pricesController'
+      })
+
+      // route for the work with us page
+      .when('/workwithus', {
+        templateUrl : 'templates/workwithus.html',
+        controller  : 'workwithusController'
       })
 
       // route for the contact page
@@ -24,19 +36,31 @@
       });
   });
 
-  // create the controller and inject Angular's $scope
-  mwcApp.controller('mainController', function($scope) {
+mwcApp.run(function($rootScope, $location, $anchorScroll, $routeParams) {
+  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    $location.hash($routeParams.scrollTo);
+    $anchorScroll();  
+  });
+})
+
+    // create the controller and inject Angular's $scope
+  mwcApp.controller('mainController', function($scope,$location, $anchorScroll, $routeParams) {
     // create a message to display in our view
     $scope.message = 'Everyone come and see how good I look!';
-    $scope.pageClass = 'page-home'; //sets individual class for each page
+    $scope.pageClass = 'page-home'; //sets individual class for each page (not used at the moment)
   });
 
-  mwcApp.controller('aboutController', function($scope) {
-    $scope.message = 'Look! I am an about page.';
-    $scope.pageClass = 'page-about';
+  mwcApp.controller('pricesController', function($scope,$location, $anchorScroll, $routeParams) {
+    $scope.message = 'Look! I am an prices page.';
+    $scope.pageClass = 'page-prices';
   });
 
-  mwcApp.controller('contactController', function($scope) {
+  mwcApp.controller('contactController', function($scope,$location, $anchorScroll, $routeParams) {
     $scope.message = 'Contact us! JK. This is just a demo.';
     $scope.pageClass = 'page-contact';
+  });
+
+  mwcApp.controller('workwithusController', function($scope,$location, $anchorScroll, $routeParams) {
+    $scope.message = 'Work With My WindowCleaner';
+    $scope.pageClass = 'page-workwithus';
   });

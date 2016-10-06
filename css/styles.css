@@ -1,14 +1,14 @@
 /* BASE STYLES
 ============================================================================= */
-html         { overflow-y:hidden; }
+/*html         { overflow-y:hidden; }*/
 .navbar{
     z-index: 10;
     /*above the pages*/
 }
 .page {
-    position: absolute;
+    position: absolute;     /*absolute so the divs won't stack when page enters*/
     left: 0;
-    top: 0px;
+    top: 50px; /*navbar is 50px high*/
     width: 100%;
     height: 100%;
     z-index: 9;    
@@ -19,20 +19,18 @@ html         { overflow-y:hidden; }
 }
 .page h1 	{ font-size:60px; }
 .page a     { margin-top:50px; }
-#about      { color:#333; position:absolute; text-align:center; top:50px; width:100%; }
 
 /* INDIVIDUAL PAGES
 ============================================================================= */
-.page-home 		{ background:#00D0BC; color:#00907c; }
-.page-about 	{ background:#30cddb; color:#a55400; }
-.page-contact 	{ background:#ffa6bb; color:#9e0000; }
-
-
+.page-home 		{ background:#c4daff; color:#00907c; }
+.page-prices 	{ background:#98afd6; color:#a55400; }
+.page-contact 	{ background:#6b89ba; color:#9e0000; }
+.page-WorkWithUs { background:#c4daff; color:#00907c; }
 
 /* ANIMATIONS
 ============================================================================= */
 /*http://dfsq.github.io/ngView-animation-effects/app/#/code*/
-/* could use page-home, page-about etc. classes to customize transitions for each page*/
+/* could use page-home, page-prices etc. classes to customize transitions for each page*/
 .page.ng-enter,
 .page.ng-leave {
     -webkit-transition: all 1s ease;
@@ -50,3 +48,6 @@ html         { overflow-y:hidden; }
 .page.ng-leave-active {
     left: -100%;
 }
+
+.jumbotron{    
+    margin-top:25px; 
