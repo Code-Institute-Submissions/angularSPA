@@ -4,16 +4,22 @@
 <html ng-app="mwcApp">
 
 <head>
+  <!-- <meta charset="utf-8">this stops the animation?? -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- SCROLLS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
   <link rel="stylesheet" href="css/bootswatch.css">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- SPELLS -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-animate.js""></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 </head>
 
@@ -23,30 +29,28 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">My Window Cleaner</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <a class="navbar-brand" href="#/home">My Window Cleaner 0203 394 0044</a>
       </div>
-
+      <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active"><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+        <!-- must have href="#home" not href="#" or the transition won't work properly -->
         <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
         <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
       </ul>
-      
+      </div>
     </div>
   </nav>
-
-  <div id="main">  
-    <!-- angular templating -->
-    <!-- this is where content will be injected -->
-    <div ng-view class="page {{ pageClass }}"></div>    
-  </div>
-  
-  <footer class="text-center">
-    <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a></p>
-  
-    <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a></p>
-  </footer>
-  
+   <div id="main">  
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+      <div ng-view class="page {{ pageClass }}"></div>    
+    </div>  
 </body>
 
 </html>
