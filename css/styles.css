@@ -2,21 +2,19 @@
 ============================================================================= */
 /*html         { overflow-y:hidden; }*/
 .navbar{
-    z-index: 10;
+    z-index: 10;    
     /*above the pages*/
 }
 .page {
-    position: absolute;     /*absolute so the divs won't stack when page enters*/
+    position: absolute;     
     left: 0;
     top: 50px; /*navbar is 50px high*/
     width: 100%;
     height: 100%;
-    z-index: 9;    
+    z-index: 9; 
+    background:green;           
 }
-#main{
-    top:20px;
-    padding: 20px;
-}
+
 .page h1 	{ font-size:60px; }
 .page a     { margin-top:50px; }
 
@@ -27,27 +25,48 @@
 .page-contact 	{ background:#6b89ba; color:#9e0000; }
 .page-WorkWithUs { background:#c4daff; color:#00907c; }
 
-/* ANIMATIONS
-============================================================================= */
-/*http://dfsq.github.io/ngView-animation-effects/app/#/code*/
-/* could use page-home, page-prices etc. classes to customize transitions for each page*/
-.page.ng-enter,
-.page.ng-leave {
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+
+@media screen and (max-width: 480px) { 
+    .page {
+        position: relative;               
+        background: black;        
+    }
+    .ng-animate {
+      transition: 0s;
+    }
 }
-.page.ng-enter {
-    left: 100%;
-}
-.page.ng-enter-active {
-    left: 0;
-}
-.page.ng-leave {
-    left: 0;
-}
-.page.ng-leave-active {
-    left: -100%;
+    /* ANIMATIONS
+    ============================================================================= */
+    /*http://dfsq.github.io/ngView-animation-effects/app/#/code*/
+    /* could use page-home, page-prices etc. classes to customize transitions for each page*/
+    .page.ng-enter,
+    .page.ng-leave {    
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    .page.ng-enter {    
+        left: 100%;
+    }
+    .page.ng-enter-active {
+        left: 0;
+    }
+    .page.ng-leave {
+        left: 0;
+    }
+    .page.ng-leave-active {
+        left: -100%;
+    }
+
+.jumbotron{
+    margin-top:15px; 
 }
 
-.jumbotron{    
-    margin-top:25px; 
+#homejtron{        
+    background: url("/imgs/cropped-iStock_000010442567_Small.jpg");
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    color: #fff000;
+    text-shadow: 2px 2px 4px #000000;    
+}

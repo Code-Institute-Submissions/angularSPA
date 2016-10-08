@@ -33,9 +33,15 @@
       .when('/contact', {
         templateUrl : 'templates/contact.html',
         controller  : 'contactController'
+      })
+      .when('/testpage', {
+        templateUrl : 'templates/testpage.html',
+        controller  : 'testpageController'
       });
   });
 
+// this is needed for bookmark links to work
+// http://stackoverflow.com/questions/31620412/scrolling-to-specific-element-on-different-template-after-clicking-link-angular
 mwcApp.run(function($rootScope, $location, $anchorScroll, $routeParams) {
   $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
     $location.hash($routeParams.scrollTo);
@@ -63,4 +69,9 @@ mwcApp.run(function($rootScope, $location, $anchorScroll, $routeParams) {
   mwcApp.controller('workwithusController', function($scope,$location, $anchorScroll, $routeParams) {
     $scope.message = 'Work With My WindowCleaner';
     $scope.pageClass = 'page-workwithus';
+  });
+
+  mwcApp.controller('testpageController', function($scope,$location, $anchorScroll, $routeParams) {
+    $scope.message = 'Test Page';
+    $scope.pageClass = 'page-testpage';
   });
