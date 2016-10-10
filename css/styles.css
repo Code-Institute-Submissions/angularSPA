@@ -1,26 +1,19 @@
 /* BASE STYLES
 ============================================================================= */
 /*html         { overflow-y:hidden; }*/
-.navbar{
-    /*z-index: 10;    */
-    /*above the pages*/
-}
+
 .page {
     position: relative;     
     left: 0;    
     width: 100%;
     height: 100%;
-    /*z-index: 9; */    
     background: url('../imgs/7029046-underwater-bubbles.jpg')          
 }
 
 .page h1 	{ font-size:60px; }
 .page a     { margin-top:50px; }
 
-body {
-    min-height: 2000px;
-    padding-top: 50px; /*70px nabar height*/
-}
+
 /* INDIVIDUAL PAGES
 ============================================================================= */
 .page-home 		{ 
@@ -45,7 +38,5 @@ body {
 }
 .jumbotron{
     background-color:rgba(0, 0, 0, 0.5);
-   /* margin-left: : 200px;
-    margin-top: 10px;
-    margin-bottom: 10px;*/
 }
+
