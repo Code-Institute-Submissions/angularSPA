@@ -2,52 +2,50 @@
 ============================================================================= */
 /*html         { overflow-y:hidden; }*/
 .navbar{
-    z-index: 10;
+    /*z-index: 10;    */
     /*above the pages*/
 }
 .page {
-    position: absolute;     /*absolute so the divs won't stack when page enters*/
-    left: 0;
-    top: 50px; /*navbar is 50px high*/
+    position: relative;     
+    left: 0;    
     width: 100%;
     height: 100%;
-    z-index: 9;    
+    /*z-index: 9; */    
+    background: url('../imgs/7029046-underwater-bubbles.jpg')          
 }
-#main{
-    top:20px;
-    padding: 20px;
-}
+
 .page h1 	{ font-size:60px; }
 .page a     { margin-top:50px; }
 
+body {
+    min-height: 2000px;
+    padding-top: 50px; /*70px nabar height*/
+}
 /* INDIVIDUAL PAGES
 ============================================================================= */
-.page-home 		{ background:#c4daff; color:#00907c; }
+.page-home 		{ 
+    background:url("../imgs/7029046-underwater-bubbles.jpg");   
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:white;    
+}
 .page-prices 	{ background:#98afd6; color:#a55400; }
 .page-contact 	{ background:#6b89ba; color:#9e0000; }
 .page-WorkWithUs { background:#c4daff; color:#00907c; }
 
-/* ANIMATIONS
-============================================================================= */
-/*http://dfsq.github.io/ngView-animation-effects/app/#/code*/
-/* could use page-home, page-prices etc. classes to customize transitions for each page*/
-.page.ng-enter,
-.page.ng-leave {
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
-}
-.page.ng-enter {
-    left: 100%;
-}
-.page.ng-enter-active {
-    left: 0;
-}
-.page.ng-leave {
-    left: 0;
-}
-.page.ng-leave-active {
-    left: -100%;
-}
 
-.jumbotron{    
-    margin-top:25px; 
+@media screen and (max-width: 480px) { 
+    .page {
+        position: relative;               
+        background: black;        
+    }
+    .ng-animate {
+      transition: 0s;
+    }
+}
+.jumbotron{
+    background-color:rgba(0, 0, 0, 0.5);
+   /* margin-left: : 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+}

@@ -36,6 +36,8 @@
       });
   });
 
+// this is needed for bookmark links to work
+// http://stackoverflow.com/questions/31620412/scrolling-to-specific-element-on-different-template-after-clicking-link-angular
 mwcApp.run(function($rootScope, $location, $anchorScroll, $routeParams) {
   $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
     $location.hash($routeParams.scrollTo);
@@ -46,7 +48,7 @@ mwcApp.run(function($rootScope, $location, $anchorScroll, $routeParams) {
     // create the controller and inject Angular's $scope
   mwcApp.controller('mainController', function($scope,$location, $anchorScroll, $routeParams) {
     // create a message to display in our view
-    $scope.message = 'Everyone come and see how good I look!';
+    $scope.message = 'this is the home page!';
     $scope.pageClass = 'page-home'; //sets individual class for each page (not used at the moment)
   });
 
