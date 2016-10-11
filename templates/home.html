@@ -1,77 +1,116 @@
 <div class="container">  
 
 <div class="row">
-    <div class="col-md-6 col-md-push-6">
-        <div class="jumbotron">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
+    <div class="col-md-12">
+        <div class="jumbotron" id="jumboHome">
+            <h1>Welcome to My Window Cleaner, the home of the reliable high quality window cleaning service</h1>            
         </div>
-    </div>
-    <div class="col-md-6 col-md-pull-6">
-        <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum quasi iusto nulla similique, asperiores. Amet possimus natus odio laboriosam molestiae nobis odit sed labore mollitia in quos, ad, officia!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus saepe neque explicabo eum quo obcaecati, magnam, fuga! Fugiat voluptas molestiae, aspernatur in cumque, consequuntur doloribus ipsam, nesciunt cum, necessitatibus impedit.</div>
-    </div> 
+    </div>    
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4 col-md-push-8">
         <div class="jumbotron">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
+            <h1>Our Methods</h1>            
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum quasi iusto nulla similique, asperiores. Amet possimus natus odio laboriosam molestiae nobis odit sed labore mollitia in quos, ad, officia!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus saepe neque explicabo eum quo obcaecati, magnam, fuga! Fugiat voluptas molestiae, aspernatur in cumque, consequuntur doloribus ipsam, nesciunt cum, necessitatibus impedit.</div>
+    <div class="col-md-8 col-md-pull-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">The traditional Method</div>
+        <div class="panel-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, officia, quo! Animi id, laudantium illum accusamus quae ex magni, sed tempora nihil adipisci molestias nesciunt saepe hic! Animi, autem, itaque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores, magni inventore repellat sunt blanditiis cum aut expedita vel. Impedit nam esse quaerat ratione nesciunt dicta qui consectetur! Quasi, voluptatem!</p>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Reach and Wash</div>
+        <div class="panel-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, officia, quo! Animi id, laudantium illum accusamus quae ex magni, sed tempora nihil adipisci molestias nesciunt saepe hic! Animi, autem, itaque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maiores, magni inventore repellat sunt blanditiis cum aut expedita vel. Impedit nam esse quaerat ratione nesciunt dicta qui consectetur! Quasi, voluptatem!</p>
+        </div>
+      </div>
+  
     </div> 
 </div>
 
+<div class="row">
+    <div class="col-md-4 col-sm-12">
+        <div class="jumbotron">
+            <h1>Services</h1>            
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-12">     
+          <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href=".acc1">
+              External Window Cleaning</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="acc1 panel-collapse collapse in">
+            <div class="panel-body">Glass and window sills cleaned as standard.</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href=".acc2">
+                Internal window Cleaning</a>
+              </h4>
+            </div>
+            <div id="collapse2" class="acc2 panel-collapse collapse">
+              <div class="panel-body">Glass and window sills as standard.
+                (Secondary double glazing is actually 2 sets of windows and therefore priced accordingly).
+                Window cleaners carry protecting shoe covers for use if required when cleaning the insides. 
+                *Note – for insides we request that window sills are cleared of ornaments etc in advance of us calling. Also that furniture is not blocking access to the windows. 
+                The window cleaners’ public liability does not cover damage to curtains inside the house. Therefore it is at the customer’s discretion if they wish for us to clean the windows with the curtains hanging. We are very careful and so far, in 15 years have never caused damage.</div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href=".acc3">
+                    Conservatory Roofs</a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="acc3 panel-collapse collapse">
+                  <div class="panel-body">Usually requested as an annual service we remove dirt, moss and other debris.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href=".acc4">
+                      Gutter Cleanrance</a>
+                    </h4>
+                  </div>
+                  <div id="collapse4" class="acc4 panel-collapse collapse">
+                    <div class="panel-body">Blocked gutters can cause serious damage! Before calling out a professional roofer it can be worth checking for simple obstructions like leaves or birds nests. We have also found the odd tennis ball lodged in a downpipe! 
+                      We can clear your gutters, a service those who require it will usually need about once a year. 
+                      We are usually over half the price of most roofing companies! 
+                      We do not undertake repair work but can advise you if you need to call in a professional roofer.
 
-<!-- 
-    <div class="row">
-        <div class="jumbotron col-sm-12 col-md-6">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
+                      For our gutter clearing service we only need the length of the guttering requiring cleaning and how many floors are in the building. 
+                      We charge £2 - £2.50 per metre for gutter clearance up to a height of 25 feet from the ground. 
+                      For gutters over 25 feet up we would arrange an appointment for an assessment and quotation.
+
+                      For a ‘gutter cleaning only’ service we have a minimum charge of £15. If we are there window cleaning the minimum charge is £10.</div>
+                    </div>
+                  </div>
+                </div>
+  
+    </div> 
+</div>
+
+        
+<div class="row">
+    <div class="col-md-4 col-sm-12">
+        <div class="jumbotron">
+            <h1>Areas Covered</h1> 
+            <p>Call: 0203 394 0044
+ 
+IF YOU DO NOT SEE YOUR AREA IN THE LIST ABOVE PLEASE CALL US AT THE OFFICE AND WE WILL TRY OUR BEST TO HELP IF WE CAN. IF WE CAN’T WE WILL TRY TO HELP YOU SOURCE A WINDOW CLEANER WHO DOES COVER YOUR AREA</p>           
         </div>
-      <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maxime officiis porro. Aliquam vel rem tempora tempore dicta, laudantium, quis molestiae reiciendis eligendi, neque consequuntur blanditiis, ut adipisci. Laborum, quod!
-      </div>
-    </div>  
-    <div class="row">
-        <div class="jumbotron col-sm-12 col-md-push-6">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
-        </div>
-      <div class="col-sm-12 col-md-pull-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maxime officiis porro. Aliquam vel rem tempora tempore dicta, laudantium, quis molestiae reiciendis eligendi, neque consequuntur blanditiis, ut adipisci. Laborum, quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolor eligendi incidunt magnam ipsa quasi sapiente quaerat, minima assumenda fugiat quia sunt, omnis dicta esse hic reprehenderit vero. Dolorem, repellendus.
-      </div>
-    </div>   
-    <div class="row">
-        <div class="col-sm-2 col-md-push-6">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
-        </div>
-      <div class="col-sm-10 col-md-pull-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maxime officiis porro. Aliquam vel rem tempora tempore dicta, laudantium, quis molestiae reiciendis eligendi, neque consequuntur blanditiis, ut adipisci. Laborum, quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolor eligendi incidunt magnam ipsa quasi sapiente quaerat, minima assumenda fugiat quia sunt, omnis dicta esse hic reprehenderit vero. Dolorem, repellendus.
-      </div>
-    </div>   
-    <div class="row">
-        <div class="col-sm-2 col-md-push-6">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
-        </div>
-      <div class="col-sm-10 col-md-pull-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maxime officiis porro. Aliquam vel rem tempora tempore dicta, laudantium, quis molestiae reiciendis eligendi, neque consequuntur blanditiis, ut adipisci. Laborum, quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolor eligendi incidunt magnam ipsa quasi sapiente quaerat, minima assumenda fugiat quia sunt, omnis dicta esse hic reprehenderit vero. Dolorem, repellendus.
-      </div>
-    </div>   
-    <div class="row">
-        <div class="col-sm-2 col-md-push-6">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
-        </div>
-      <div class="col-sm-10 col-md-pull-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maxime officiis porro. Aliquam vel rem tempora tempore dicta, laudantium, quis molestiae reiciendis eligendi, neque consequuntur blanditiis, ut adipisci. Laborum, quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolor eligendi incidunt magnam ipsa quasi sapiente quaerat, minima assumenda fugiat quia sunt, omnis dicta esse hic reprehenderit vero. Dolorem, repellendus.
-      </div>
-    </div>   
-    <div class="row">
-        <div class="col-sm-2 col-md-push-6">
-            <h1>home page</h1>
-            <p>{{ message }}</p>
-        </div>
-      <div class="col-sm-10 col-md-pull-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maxime officiis porro. Aliquam vel rem tempora tempore dicta, laudantium, quis molestiae reiciendis eligendi, neque consequuntur blanditiis, ut adipisci. Laborum, quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolor eligendi incidunt magnam ipsa quasi sapiente quaerat, minima assumenda fugiat quia sunt, omnis dicta esse hic reprehenderit vero. Dolorem, repellendus.
-      </div>
-    </div>    -->
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <img src="../imgs/AREA-MAP-MYC.jpg">
+  
+    </div> 
 </div>
 
