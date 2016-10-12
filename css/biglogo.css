@@ -45,6 +45,7 @@
   color: white;
   text-shadow: 1px 1px 2px #000000;
   font-size: 2.5em;
+  letter-spacing: 1px;
   padding-bottom: 2px;
 }
 
@@ -60,6 +61,7 @@
 }
 .big-logo-row h1 {
   font-size: 2.5em;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0 0 15px 0;
 }
