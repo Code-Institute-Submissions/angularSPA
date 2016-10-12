@@ -67,3 +67,8 @@
 .aln_right{
     float:right;
 }
+
+#map {
+      height: 520px;
+      width: 700px;
+    }

@@ -116,12 +116,24 @@ A water fed pole uses a very high level of pure water and when pure water flows 
             <p>Call: 0203 394 0044<p>
         </div>
     </div>
-    <div class="col-md-8 col-sm-12">
-    <figure class="figure">
-  <img src="../imgs/AREA-MAP-MYC.jpg" class="figure-img img-fluid img-rounded" alt="MWC Areas covered">
-  <figcaption class="figure-caption">IF YOU DO NOT SEE YOUR AREA IN THE LIST ABOVE PLEASE CALL US AT THE OFFICE AND WE WILL TRY OUR BEST TO HELP IF WE CAN. IF WE CAN’T WE WILL TRY TO HELP YOU SOURCE A WINDOW CLEANER WHO DOES COVER YOUR AREA.</figcaption>
-</figure>
-    </div>
+<div class="col-md-8 col-sm-12">
+  <div id="map"></div>
+  <!-- polygon coordinates for Google Maps: -->
+  <script src="js/encoord.js"></script>
+  <script src="js/rmcoord.js"></script>
+  <script src="js/eccoord.js"></script>
+  <script src="js/igcoord.js"></script>
+  <script src="js/ncoord.js"></script>
+  <script src="js/e_coord.js"></script>
+  <script src="js/map.js">
+
+           
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABlmHVEqE46Jgh9fvERagzKHKUHK9P9B4&callback=initMap"
+    async defer></script>
+      
+  <span>IF YOU DO NOT SEE YOUR AREA IN THE LIST ABOVE PLEASE CALL US AT THE OFFICE AND WE WILL TRY OUR BEST TO HELP IF WE CAN. IF WE CAN’T WE WILL TRY TO HELP YOU SOURCE A WINDOW CLEANER WHO DOES COVER YOUR AREA.</span>
+</div>
 
 <script type="text/javascript">  $('.collapse').on('shown.bs.collapse', function(){
 $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
