@@ -34,7 +34,7 @@
     }
     .ng-animate {
       transition: 0s;
-    }
+    }    
 }
 .jumbotron{
     background-color:rgba(0, 0, 0, 0.5);    
@@ -68,7 +68,5 @@
     float:right;
 }
 
-#map {
-      height: 520px;
-      width: 700px;
-    }
+/*todo: javascript to resize map */
+

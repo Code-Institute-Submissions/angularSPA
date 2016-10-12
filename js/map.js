@@ -5,6 +5,9 @@
           center: {lat: 51.618953, lng: 0.080216},
           mapTypeId: 'roadmap'
         });
+        
+        google.maps.event.addDomListener(window, 'resize', initMap);
+     google.maps.event.addDomListener(window, 'load', initMap);
 
 
         // Construct the polygon.
