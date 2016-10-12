@@ -7,20 +7,27 @@
   <title>Bootstrap Case</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<!--Styles-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
   <link rel="stylesheet" href="/css/biglogo.css">
   <link rel="stylesheet" href="/css/styles.css">
+
+<!--JS Libraries-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-animate.js""></script>
-  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
   <script src="js/script.js"></script>
+  <!--Angular material from https://material.angularjs.org/latest/ -->
 </head>
 <!-- define angular controller -->
 <body ng-controller="mainController">
-
 
   <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container">
@@ -77,26 +84,20 @@
   </div> 
 
   <script>
-  var navbarHeight = $('.navbar').height(); 
-
+  var navbarHeight = $('.navbar').height();
   $(window).scroll(function() {
   var navbarColor = "62,195,246";//color attr for rgba
   var smallLogoHeight = $('.small-logo').height();
-  var bigLogoHeight = $('.big-logo').height();
-  
+  var bigLogoHeight = $('.big-logo').height();  
   
   var smallLogoEndPos = 0;
-  var smallSpeed = (smallLogoHeight / bigLogoHeight);
-  
-  var ySmall = ($(window).scrollTop() * smallSpeed); 
-  
+  var smallSpeed = (smallLogoHeight / bigLogoHeight);  
+  var ySmall = ($(window).scrollTop() * smallSpeed);   
   var smallPadding = navbarHeight - ySmall;
   if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
   if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
-  if (smallPadding < 0) { smallPadding = 0; }
-  
-  $('.small-logo-container ').css({ "padding-top": smallPadding});
-  
+  if (smallPadding < 0) { smallPadding = 0; }  
+  $('.small-logo-container ').css({ "padding-top": smallPadding});  
   var navOpacity = ySmall / smallLogoHeight; 
   if  (navOpacity > 1) { navOpacity = 1; }
   if (navOpacity < 0 ) { navOpacity = 0; }
@@ -108,12 +109,9 @@
     $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
   } else {
     $('.navbar').css({"box-shadow": "none"});
-     }
-  
+     }  
 });
-
-
-  </script>
+</script>
 
 </body>
 </html>
