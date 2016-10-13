@@ -22,40 +22,38 @@
     background-size:cover;
     color:white;    
 }
-.page-prices 	{ background:#98afd6; color:#a55400; }
-.page-contact 	{ background:#6b89ba; color:#9e0000; }
-.page-WorkWithUs { background:#c4daff; color:#00907c; }
 
-
-@media screen and (max-width: 480px) { 
-    .page {
-        position: relative;               
-        background: black;        
-    }
-    .ng-animate {
-      transition: 0s;
-    }    
-}
 .jumbotron{
-    background-color:rgba(0, 0, 0, 0.5);    
+    background-color:rgba(0, 0, 0, 0.5);
+    color:white;    
 }
 #jumboHome{
-        margin-top:     15px;
-        /*background: linear-gradient(45deg,  rgba(0, 0, 0, 1.0) 0%,rgba(0, 0, 0, 0.5) 100%); /* W3C */
+        margin-top:     15px;        
         background-image: url("../imgs/Window_1920x450.jpg");
         background-size:    cover;
-        /*background-repeat:  no-repeat;  */
-        /*width:  100%;*/
-        /*height:     100%;*/
-
+}
+#jumboPrices{
+    margin-top:     15px;        
+    height:     300px;
+    background-image: url("../imgs/ap_phrase_background.jpg");
+    background-size:    cover;   
+    text-align:     right;
+    padding-right: 50px;    
+}
+@media screen and (min-width: 630px) { 
+    #jumboPrices{
+        padding-right: 150px;    /*keeps text in sky area of image*/
+    }
 }
 
 .panel{
     background-color: rgba(48, 101, 186,0.85);
     color: white; 
+    margin: 0 auto;    
 }
 .panel p{    
     padding: 15px;
+
 }
 .panel-title{
     font-weight: bold;
@@ -67,6 +65,31 @@
 .aln_right{
     float:right;
 }
+.card{
+    background: white;
+    width: 20em;    
+    text-align: center;
+    padding: 3px;
+    border: 10px solid rgba(0,0,0,.125);
+    border-radius: 8px;
+    border-top: 5px;    
+    border-bottom: 5px;
+    border-right: 10px;
+    border-left: 10px;
+    color: black;
+    margin:5px;
+}
+.form-group{
+    padding-top:    10px;        
+}
+.datepicker{
+    padding:    10px 10px 10px;
+    border-radius:  5px;
+}
 
-/*todo: javascript to resize map */
+#quote-panel{
+    color:black;
+    background-color:   white;
 
+
+}

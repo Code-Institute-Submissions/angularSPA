@@ -1,0 +1,246 @@
+<div class="panel panel-default" id="quote-panel">
+    <div class="panel-heading">My Window Cleaner</div>
+    <div class="panel-body">
+
+<div class="container-fluid">
+
+  <h1>Get a Quote</h1>
+  <form class="form">
+  <div class="row">
+    <div class="form-group col-md-3">
+      <label class="control-label" for="property">Property type</label>
+      <div>
+      <select id="property" name="property" class="form-control">
+      <option value="Flat/Maisonette">Flat/Maisonette</option>
+      <option value="Bungalow">Bungalow</option>
+      <option value="House">House</option>
+      <option value="Appartment Block">Appartment Block</option>
+      <option value="Offices">Offices</option>
+      <option value="Shop">Shop</option>
+      <option value="Other Commercial">Other Commercial</option>
+      </select>
+      </div>
+    </div>
+<div class="form-group col-md-5">
+  <label class="control-label" for="name">Name</label>  
+  <div>
+  <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required>    
+  </div>
+</div>
+<div class="form-group col-md-4">
+  <label class="control-label" for="company">Company</label>  
+  <div>
+  <input id="company" name="company" type="text" placeholder="" class="form-control input-md">    
+  </div>
+</div>
+</div> <!-- row -->
+<div class="row">
+  <div class="form-group col-md-6">
+    <label class="control-label" for="address">Address</label>
+    <div>                     
+      <textarea class="form-control" id="address" name="address" required></textarea>
+    </div>
+  </div>
+  <div class="form-group col-md-6">
+    <label class="control-label" for="postcode">Postcode</label>  
+    <div>
+    <input id="postcode" name="postcode" type="text" placeholder="" class="form-control input-md" required>    
+    </div>
+  </div>
+</div> <!-- row -->
+<div class="row">
+  <div class="form-group col-md-8">
+    <label class="control-label" for="telephone">Telephone</label>  
+    <div>
+    <input id="telephone" name="telephone" type="text" placeholder="" class="form-control input-md" required>    
+    </div>
+  </div>
+  <div class="form-group col-md-4">
+    <label class="control-label" for="extension">Extension</label>  
+    <div>
+    <input id="extension" name="extension" type="text" placeholder="" class="form-control input-md">    
+    </div>
+  </div>
+</div> <!-- row -->
+<div class="row">
+  <div class="form-group col-md-6">
+    <label class="control-label" for="mobile">Mobile</label>  
+    <div>
+    <input id="mobile" name="mobile" type="text" placeholder="" class="form-control input-md">    
+    </div>
+  </div>
+  <div class="form-group col-md-6">
+    <label class="control-label" for="email">Email:</label>  
+    <div>
+    <input type="email" id="email" name="email" type="text" placeholder="" class="form-control input-md">    
+    </div>
+  </div>
+</div> <!-- row -->
+<div class="row">
+  <div class="form-group col-md-6">
+    <label class="control-label" for="fromtime">Best time to call on weekdays:</label>  
+    <div>
+    <input id="fromtime" name="fromtime" type="text" placeholder="" class="form-control input-md">    
+    </div>
+  </div>
+  <script>
+    $(function() {
+        $('#fromtime').timepicker();
+    });
+  </script> 
+  <div class="form-group col-md-6">
+    <label class="control-label" for="totime">till:</label>  
+    <div>
+    <input id="totime" name="totime" type="text" placeholder="" class="form-control input-md">    
+    </div>
+  </div>
+  <script>
+    $(function() {
+        $('#totime').timepicker();
+    });
+  </script> 
+</div> <!-- row -->
+<div class="row">
+<span><strong>What do you require?</strong></span>  
+</div> <!-- row -->
+
+<div class="row">
+  <div class="form-group col-md-4">
+      <span><strong>Window cleaning (check all that apply)</strong></span>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">All outsides</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Conservatory</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Conservatory roof</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Additional glass</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Frame cleaning</label>
+      </div>    
+  </div>
+    <div class="form-group col-md-4">
+      <span><strong>Gutter clearance - Unblocking</strong></span>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Porch</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Ground Floor</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Roof</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">2nd Floor Roof</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Front</label>
+      </div>    
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Side</label>
+      </div>    
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Back</label>
+      </div>    
+  </div>
+  <div class="form-group col-md-4">
+      <span><strong>Gutter clearance - Regular Maintenance clean?</strong></span>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Porch</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Ground Floor</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Roof</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">2nd Floor Roof</label>
+      </div>
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Front</label>
+      </div>    
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Side</label>
+      </div>    
+      <div class="checkbox">
+      <label><input type="checkbox" value="">Back</label>
+      </div>    
+  </div>
+
+</div> <!-- row -->
+<div class="row">
+  <div class="form-group col-md-3">      
+      <div class="checkbox">
+        <label><input type="checkbox" value="" ng-model="patiochk">Patio &amp; driveway cleaning</label>
+      </div>          
+  </div>
+  <div class="form-group col-md-3">
+  <label class="control-label" for="area">APPROX. area in sq. meters</label>  
+  <div>
+  <input id="area" name="area" type="text" placeholder="" class="form-control input-md" ng-disabled="!patiochk">    
+  </div>
+</div>
+
+  <div class="form-group col-md-6">
+    <span><strong>When do you need the work done by?</strong></span>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked ng-click="checked=true" ng-init="checked=true">
+        ASAP
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" ng-click="checked=true">
+        No rush
+      </label>
+    </div>
+    <div class="radio disabled">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" ng-click="checked=false">
+        Preferred Date
+      </label>
+    </div>    
+      <div>
+        <md-datepicker class="datepicker" id="preferreddate" ng-model="myDate" md-placeholder="Enter date" ng-disabled="checked"></md-datepicker>
+    </div>
+  </div>
+  
+</div> <!-- row -->
+
+<div class="row"> 
+    <div class="form-group col-md-3">
+      <label class="control-label" for="frequency">How often do you require your windows cleaned?</label>
+      <div>
+      <select id="frequency" name="frequency" class="form-control">
+      <option value="weekly">Weekly (shops only)</option>
+      <option value="4weekly">4 Weekly</option>
+      <option value="8weekly">8 Weekly</option>
+      <option value="12weekly">12 Weekly</option>
+      <option value="OneOff">One off</option>
+      <option value="Other">Other</option>      
+      </select>
+      </div>
+    </div>
+
+    <div class="form-group col-md-5">
+    <label class="control-label" for="lastclean">How long ago were your windows last cleaned? (example 20/12/2010)</label>  
+      <div>
+      <md-datepicker class="datepicker" id="lastclean" ng-model="lastclean" md-placeholder="Enter date"></md-datepicker>
+      </div>
+    </div>
+
+</div>
+
+<button type="submit" class="btn btn-default">Submit</button>
+
+
+</form>  
+</div> <!-- container -->
+</div> <!-- panel-body -->
+</div> <!-- panel -->
