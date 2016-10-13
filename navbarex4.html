@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 
-<!-- define angular app -->
 <html ng-app="mwcApp">
-
 <head>
-  <title>Bootstrap Case</title>
+  <title>My Window Cleaner</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
 <!--Styles-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
@@ -22,17 +20,13 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>  
-  
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>    
+<!-- angular definitions -->
+<script src="js/script.js"></script>
 
-  <script src="js/script.js"></script>
-
-  <!--Angular material from https://material.angularjs.org/latest/ -->
 </head>
 <!-- define angular controller -->
 <body ng-controller="mainController">
-
   <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -43,7 +37,7 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="small-logo-container">
-            <a class="small-logo" href="#">My Window Cleaner</a>
+            <a class="small-logo" href="#home">My Window Cleaner</a>
           </div>
         </div>
         <div class="collapse navbar-collapse navbar-right">
@@ -66,8 +60,8 @@
     </li>
             </ul>
         </div><!--/.nav-collapse -->
-    </div>
-    </div>
+    </div> <!-- container -->
+    </div> <!-- navbar -->
 
   <div class="container-fluid big-logo-row">
       <div class="container">
@@ -80,42 +74,14 @@
     </div><!--/.container-fluid -->
 
   <div id="main">  
-      <!-- angular templating -->
-      <!-- this is where content will be injected -->
+      <!-- angular templating -->     
       <div ng-view class="page {{ pageClass }}">
         <div ng-include="templates/home.html"></div>
       </div>    
   </div> 
-
-  <script>
-  var navbarHeight = $('.navbar').height();
-  $(window).scroll(function() {
-  var navbarColor = "62,195,246";//color attr for rgba
-  var smallLogoHeight = $('.small-logo').height();
-  var bigLogoHeight = $('.big-logo').height();  
   
-  var smallLogoEndPos = 0;
-  var smallSpeed = (smallLogoHeight / bigLogoHeight);  
-  var ySmall = ($(window).scrollTop() * smallSpeed);   
-  var smallPadding = navbarHeight - ySmall;
-  if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
-  if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
-  if (smallPadding < 0) { smallPadding = 0; }  
-  $('.small-logo-container ').css({ "padding-top": smallPadding});  
-  var navOpacity = ySmall / smallLogoHeight; 
-  if  (navOpacity > 1) { navOpacity = 1; }
-  if (navOpacity < 0 ) { navOpacity = 0; }
-  var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
-  $('.navbar').css({"background-color": navBackColor});
-  
-  var shadowOpacity = navOpacity * 0.4;
-  if ( ySmall > 1) {
-    $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
-  } else {
-    $('.navbar').css({"box-shadow": "none"});
-     }  
-});
-</script>
+<!-- controls the color change etc. of the navbar on scroll  -->
+<script src="js/bignavbar.js"></script>
 
 </body>
 </html>
