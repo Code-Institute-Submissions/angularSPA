@@ -22,6 +22,24 @@
     background-size:cover;
     color:white;    
 }
+.page-prices{
+    background:url("../imgs/rain.jpg");   
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:white;    
+}
+.page-workwithus{
+    background:url("../imgs/7029046-underwater-bubbles.jpg");   
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:white;      
+}
+.page-contact{
+    background:url("../imgs/rain.jpg");   
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:white;      
+}
 
 .jumbotron{
     background-color:rgba(0, 0, 0, 0.5);
@@ -40,19 +58,42 @@
     text-align:     right;
     padding-right: 50px;    
 }
+#jumboWorkwithus{
+    margin-top:     15px;        
+    height:     300px;
+    background-image: url("../imgs/ap_phrase_background.jpg");
+    background-size:    cover;           
+    padding-right: 50px;    
+    text-align: right;
+}
+#jumboContact{
+    margin-top:     15px;        
+    height:     300px;
+    background-image: url("../imgs/ap_phrase_background.jpg");
+    background-size:    cover;       
+    padding-right: 50px;    
+    text-align: right;
+}
+
 @media screen and (min-width: 630px) { 
     #jumboPrices{
         padding-right: 150px;    /*keeps text in sky area of image*/
     }
+    #jumboWorkwithus{
+        padding-right: 150px;    /*keeps text in sky area of image*/
+    }
+    #jumboContact{
+        padding-right: 150px;    /*keeps text in sky area of image*/
+    }    
 }
 
 .panel{
     background-color: rgba(48, 101, 186,0.85);
     color: white; 
-    margin: 0 auto;    
+    margin: 15 auto;    
 }
 .panel p{    
-    padding: 15px;
+    padding-top: 50px;
 
 }
 .panel-title{
