@@ -60,7 +60,7 @@
   padding-top: 50px;  
 }
 .big-logo-row h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: 1px;
   margin: 0;
   padding: 0 0 15px 0;
@@ -69,7 +69,12 @@
 h1{
   font-size:  2em;
 }
-
+.jumbotron h1{
+    font-size: 2em;
+  }
+  #jumbohome{
+    height: 20em;
+  }
 #map {
       height: 300px;
       width: 450px;
@@ -78,33 +83,37 @@ h1{
 @media (min-width: 375px) {
   h1 {
     font-size: 2em;
-  }
+  }  
   .jumbotron h1{
     font-size: 2em;
   }
+  #jumbohome{
+    height: 20em;
+  }
   #map{
         height: 400px;
-        width: 475px;
+        width: 425px;
     }
 }
 @media (min-width: 440px) {
   h1 {
-    font-size: 2.5em;
-  }
+    font-size: 2em;  }  
+  
   .jumbotron h1{
-    font-size: 2.5em;
+    font-size: 2em;
   }
+  
   #map{
         height: 300px;
-        width: 400px;
+        width: 440px;
     }
 }
 @media (min-width: 500px) {
   h1 {
-    font-size: 2.5em;
-  }
+    font-size: 2em;
+  }    
   .jumbotron h1{
-    font-size: 2.5em;
+    font-size: 2em;
   }
   #map{
         height: 200px;
@@ -113,39 +122,45 @@ h1{
 }
 @media (min-width: 630px) {
   h1 {
-    font-size: 3em;
-  }
+    font-size: 2.5em;
+  }    
   .jumbotron h1{
-    font-size: 3em;
+    font-size: 2em;
   }
   #map{
         height: 400px;
-        width: 500px;
+        width: 630px;
     }
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 3em;    
-  }
+    font-size: 3em;
+  }    
   .jumbotron h1{
     font-size: 3em;
   }
   #map{
-        height: 600px;
-        width: 700px;
+        height: 550px;
+        width: 600px;
     }
 }
   
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   h1 {
-    font-size: 3.5em;
+    font-size: 4em;
+  }
+  #jumbohome{
+    height: 10em;
+  }
+  .jumbotron{    
+    height: 20em;
   }
   .jumbotron h1{
-   font-size: 3.5em; 
+   font-size: 4em; 
   }
   #map{
         height: 500px;
-        width: 800px;
-    }
+        width: 750px;
+    }*/
 
 }

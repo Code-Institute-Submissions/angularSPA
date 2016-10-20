@@ -112,10 +112,36 @@ A water fed pole uses a very high level of pure water and when pure water flows 
 <div class="row">
     <div class="col-md-4 col-sm-12">
         <div class="jumbotron">
-            <h1>Areas Covered</h1> 
-            <p>Call: 0203 394 0044<br>
-            <span>If you do not see your area in the list please call us at the office and we will try our best to help if we can. if we can’t we will try to help you source a window cleaner who does cover your area.</span></p>
+            <h1>Areas Covered</h1>             
+            <p>You can check if we cover your area in the search box below, or call us on 0203 123 4567</p>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Your postcode..." id = "pcode_txt">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button" id = "pcode_btn">Go!</button>
+              </span>
+            </div><!-- /input-group -->
         </div>
+    <script src="js/area_coordinates/postcodes.js"></script> 
+    <script> 
+
+      var search = document.getElementById("pcode_btn");
+      var found = false;
+
+      search.onclick = function() {        
+      var pcode_txt = document.getElementById("pcode_txt").value;      
+          for (i=0; i<postcodes.length; i++){        
+            if (postcodes[i].valueOf().replace(" ", "") == pcode_txt.valueOf().replace(" ", "")) {
+              found = true;            
+            }              
+          }
+      if (found == false){
+        alert("Sorry we do not cover your postcode at the moment, but get in touch with the office to see if we can add your area in the near future");
+      } else {
+        alert("Your area is covered by My Window Cleaner!");
+      };
+      };
+    </script>  
+  
     </div>
 <div class="col-md-8 col-sm-12">
   <div id="map"></div>
