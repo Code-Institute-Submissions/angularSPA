@@ -60,7 +60,7 @@
   padding-top: 50px;  
 }
 .big-logo-row h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: 1px;
   margin: 0;
   padding: 0 0 15px 0;
@@ -76,7 +76,7 @@ h1{
     height: 20em;
   }
 #map {
-      height: 300px;
+      height: 400px;
       width: 450px;
     }
 
@@ -104,7 +104,7 @@ h1{
   }
   
   #map{
-        height: 300px;
+        height: 400px;
         width: 440px;
     }
 }
@@ -116,7 +116,7 @@ h1{
     font-size: 2em;
   }
   #map{
-        height: 200px;
+        height: 400px;
         width: 500px;
     }
 }

@@ -1,69 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome to Firebase Hosting</title>
-    <style media="screen">
-      body {
-        font-family: Roboto, Arial, sans-serif;
-        background: #ECEFF1;
-        color: rgba(0,0,0,0.87);
-      }
 
-      a {
-        color: rgb(3,155,229);
-      }
+<html ng-app="mwcApp">
+<head>
+  <title>My Window Cleaner</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+<!--Styles-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+  <link rel="stylesheet" href="css/biglogo.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
 
-      #message {
-        max-width: 400px;
-        margin: 40px auto;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
-        border-radius: 2px;
-        background: white;
-        padding: 16px 24px;
-      }
+<!--JS Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>  
+<!-- form validation -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
 
-      #message h1 {
-        font-size: 22px;
-        font-weight: 500;
-        text-align: center;
-        margin: 0 0 16px;
-      }
+<script src="js/script.js"></script>
+  
+<!-- timepicker http://jonthornton.github.io/jquery-timepicker/-->
+  <script type="text/javascript" src="js/jquery.timepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css" />  
 
-      #message p {
-        font-weight: 300;
-        line-height: 150%;
-      }
+<!--goes last-->
+<link rel="stylesheet" href="css/styles.css">  
+<!-- <base href="/"> -->
+</head>
+<!-- define angular controller -->
+<body ng-controller="mainController">
+  <div class="navbar navbar-fixed-top navbar-inverse" role="navigation" id = "navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="small-logo-container">
+            <a class="small-logo" href="#home">My Window Cleaner</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li class="active">
+              <a href="#home" class="hidden-xs">Home</a>
+              <a href="#home" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Home</a>
+              </li>
+              <li>
+              <a href="#prices" class="hidden-xs">Prices</a>
+              <a href="#prices" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Prices</a>
+              </li>
+              <li>
+              <a href="#workwithus" class="hidden-xs">Work With Us</a>
+              <a href="#workwithus" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Work With Us</a>
+              </li>
+              <li>
+              <a href="#contact" class="hidden-xs">Contact</a>
+              <a href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Contact</a>
+              </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div> <!-- container -->
+    </div> <!-- navbar -->
 
-      #message ul {
-        list-style: none;
-        margin: 16px 0 0;
-        padding: 0;
-        text-align: center;
-      }
+  <div class="container-fluid big-logo-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 big-logo-container">
+            <h1 class="big-logo">My Window Cleaner</h1>
+          </div><!--/.col-xs-12 -->
+        </div><!--/.row -->
+      </div><!--/.container -->
+    </div><!--/.container-fluid -->
 
-      #message li a {
-        display: inline-block;
-        padding: 8px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 500;
-        background: rgb(3,155,229);
-        color: white;
-        border: 1px solid rgb(3,155,229);
-        border-radius: 3px;
-        font-size: 14px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h1>Welcome to Firebase Hosting</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <ul>
-        <li><a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a></li>
-      </ul>
-    </div>
-  </body>
+  <div id="main">  
+      <!-- angular templating -->     
+      <div ng-view class="page {{ pageClass }}">
+        <div ng-include="templates/home.html"></div>
+      </div>    
+  </div> 
+  
+<!-- controls the color change etc. of the navbar on scroll  -->
+<script src="js/bignavbar.js"></script>
+
+</body>
 </html>

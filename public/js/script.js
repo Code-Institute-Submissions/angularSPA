@@ -2,7 +2,7 @@
   var mwcApp = angular.module('mwcApp', ['ngRoute', 'ngAnimate','ngMaterial', 'ngMessages']);
 
   // configure our routes
-  mwcApp.config(function($routeProvider) {
+  mwcApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
 
       // route for the home page
@@ -34,6 +34,11 @@
         templateUrl : 'templates/contact.html',
         controller  : 'contactController'
       });
+
+      // use the HTML5 History API
+        // $locationProvider.html5Mode(true);
+
+
   });
 
 // this is needed for deep-linking (# bookmark links) to work
