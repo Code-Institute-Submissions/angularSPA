@@ -90,7 +90,7 @@ h1{
   #jumbohome{
     height: 20em;
   }
-  #map{
+  .google-map{
         height: 400px;
         width: 425px;
     }
@@ -103,7 +103,7 @@ h1{
     font-size: 2em;
   }
   
-  #map{
+  .google-map{
         height: 400px;
         width: 440px;
     }
@@ -115,7 +115,7 @@ h1{
   .jumbotron h1{
     font-size: 2em;
   }
-  #map{
+  .google-map{
         height: 400px;
         width: 500px;
     }
@@ -127,7 +127,7 @@ h1{
   .jumbotron h1{
     font-size: 2em;
   }
-  #map{
+  .google-map{
         height: 400px;
         width: 630px;
     }
@@ -139,7 +139,7 @@ h1{
   .jumbotron h1{
     font-size: 3em;
   }
-  #map{
+  .google-map{
         height: 550px;
         width: 600px;
     }
