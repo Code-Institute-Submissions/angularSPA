@@ -1,3 +1,22 @@
+//this is a custom email validator... not needed but demonstrates directive
+mwcApp.directive('overwriteEmail', function() {
+  var EMAIL_REGEXP = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/i;
+
+  return {
+    require: '?ngModel',
+    link: function(scope, elm, attrs, ctrl) {
+      // only apply the validator if ngModel is present and Angular has added the email validator
+      if (ctrl && ctrl.$validators.email) {
+
+        // this will overwrite the default Angular email validator
+        ctrl.$validators.email = function(modelValue) {
+          return ctrl.$isEmpty(modelValue) || EMAIL_REGEXP.test(modelValue);
+        };
+      }
+    }
+  };
+});
+
 // Google Map
 //http://stackoverflow.com/questions/24246403/angularjs-load-google-map-script-async-in-directive-for-multiple-maps
 mwcApp.directive('googleMap', function($rootScope, lazyLoadApi) {
@@ -94,27 +113,4 @@ mwcApp.directive('googleMap', function($rootScope, lazyLoadApi) {
       }
     }
   };
-});
-
-mwcApp.service('lazyLoadApi', function lazyLoadApi($window, $q) {
-  function loadScript() {
-    console.log('loadScript')
-      // use global document since Angular's $document is weak
-    var s = document.createElement('script')
-    s.src = '//maps.googleapis.com/maps/api/js?key=AIzaSyABlmHVEqE46Jgh9fvERagzKHKUHK9P9B4&callback=initMap'
-    document.body.appendChild(s)
-  }
-  var deferred = $q.defer()
-
- $window.initMap = function() {
-    deferred.resolve()
-  }
-
-  if ($window.attachEvent) {
-    $window.attachEvent('onload', loadScript)
-  } else {
-    $window.addEventListener('load', loadScript, false)
-  }
-
-  return deferred.promise
 });

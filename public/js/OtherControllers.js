@@ -8,7 +8,7 @@ mwcApp.controller('pricesController', function($scope,$location, $anchorScroll, 
     // all the validation is done before submit
     window.alert("Thanks you for getting in touch!");
       };    
-  });
+  });  
 
   mwcApp.controller('workwithusController', function($scope,$location, $anchorScroll, $routeParams) {    
     $scope.pageClass = 'page-workwithus';

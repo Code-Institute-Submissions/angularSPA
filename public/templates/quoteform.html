@@ -1,5 +1,4 @@
 <div ng-controller="quoteformController" class = "quotecontainer">
-
   <div class="panel panel-primary" id="quote-panel">
     <div class="panel-heading">My Window Cleaner</div>
     <div class="panel-body">
@@ -237,8 +236,7 @@
           </div>
         </div>
         <div class="form-group col-md-3">
-        <button type="submit" name = "submit" class="btn btn-primary"  ng-click="submit()">Send quote!</button>        
-        <!-- ng-disabled="quoteform.$invalid || !workChosen()" -->
+        <button type="submit" name = "submit" class="btn btn-primary" ng-disabled="quoteform.$invalid || !workChosen()"" ng-click="submit()">Send quote!</button>                
         </div>
       </form>  
     </div> <!-- container -->

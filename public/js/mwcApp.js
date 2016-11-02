@@ -4,7 +4,6 @@
   // configure our routes
   mwcApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
-
       // route for the home page/root
       .when('/', {
         templateUrl : 'templates/home.html',
@@ -38,8 +37,6 @@
       .otherwise({
             redirectTo: '/home'
       });
-
-
   });
 
 // this is needed for deep-linking (# bookmark links) to work
@@ -49,4 +46,5 @@ mwcApp.run(function($rootScope, $location, $anchorScroll, $routeParams) {
     $location.hash($routeParams.scrollTo);
     $anchorScroll();  
   });
-}) 
+});
+

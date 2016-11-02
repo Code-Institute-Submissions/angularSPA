@@ -1,7 +1,5 @@
   // create the controller and inject Angular's $scope
-  mwcApp.controller('mainController', function($scope,$location, $anchorScroll, $routeParams,$mdDialog) {
-    // create a message to display in our view
-    $scope.message = 'this is the home page!';
+  mwcApp.controller('mainController', function($scope,$location, $anchorScroll, $routeParams,$mdDialog) {        
     $scope.pageClass = 'page-home'; //sets individual class for each page (not used at the moment)
     
     $scope.status = '  ';

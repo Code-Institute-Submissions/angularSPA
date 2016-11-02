@@ -1,5 +1,5 @@
 var navbarHeight = $('.navbar').height();
-  $(window).scroll(function() {
+$(window).scroll(function() {
   var navbarColor = "62,195,246";//color attr for rgba
   var smallLogoHeight = $('.small-logo').height();
   var bigLogoHeight = $('.big-logo').height();  
@@ -23,5 +23,5 @@ var navbarHeight = $('.navbar').height();
     $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
   } else {
     $('.navbar').css({"box-shadow": "none"});
-     }  
+  }  
 });
