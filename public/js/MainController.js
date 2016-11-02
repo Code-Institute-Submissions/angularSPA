@@ -37,5 +37,4 @@
       fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.      
       })        
     };   
-
   });
