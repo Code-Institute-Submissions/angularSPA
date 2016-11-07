@@ -75,7 +75,7 @@ body{
 }
 #jumboWorkwithus{
     margin-top:     15px;            
-    background-image: url("../imgs/shdhsIR.jpg");
+    background-image: url("../imgs/ap_phrase_background.jpg");
     background-size:    cover;               
     padding-right: 50px;    
     text-align: right;
@@ -104,7 +104,8 @@ body{
 .panel{
     background-color: rgba(48, 101, 186,0.85);
     color: white; 
-    margin: 15 auto;    
+    margin: 15 auto;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
 }
 .panel p{    
     padding-top: 10px;
@@ -133,6 +134,8 @@ body{
     border-left: 10px;
     color: black;
     margin:5px;
+    height: 388px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .form-group{
     padding-top:    10px;        
@@ -157,4 +160,7 @@ li {
 }
 #contactform{
     color:black;
+}
+.well{
+    background-color: rgba(0,0,0,0.54)
 }

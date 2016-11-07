@@ -1,9 +1,9 @@
-  // create the controller and inject Angular's $scope
   mwcApp.controller('mainController', function($scope,$location, $anchorScroll, $routeParams,$mdDialog) {        
-    $scope.pageClass = 'page-home'; //sets individual class for each page (not used at the moment)
-    
+    $scope.pageClass = 'page-home'; //sets individual class for each page   
     $scope.status = '  ';
     $scope.customFullscreen = false;
+
+    // dialogs:    
 
     $scope.showTradMthd = function(ev) {
     $mdDialog.show({
@@ -35,4 +35,5 @@
       fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.      
       })        
     };   
+
   });

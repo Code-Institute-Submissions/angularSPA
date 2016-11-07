@@ -1,3 +1,4 @@
+//this is for loading several Googlemaps if necessary
 mwcApp.service('lazyLoadApi', function lazyLoadApi($window, $q) {
   function loadScript() {
     console.log('loadScript')
@@ -20,3 +21,19 @@ mwcApp.service('lazyLoadApi', function lazyLoadApi($window, $q) {
 
   return deferred.promise
 });
+
+//returns a postcode list from postcodes.json file
+  mwcApp.service("postcodeCheckService", function($http, $q) 
+  {  
+    var deffered = $q.defer();
+    $http.get('/js/area_coordinates/postcodes.json').then(function(data) 
+    {      
+      deffered.resolve(data);            
+    });
+
+    this.getPostcodes = function ()
+    {      
+      return deffered.promise;      
+    }
+  });
+

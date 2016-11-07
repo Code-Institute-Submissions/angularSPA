@@ -1,5 +1,5 @@
 
-<div class="container"> 
+<div class="container" ng-controller="homeController"> 
   <div class="row">
     <div class="col-md-12">
       <div class="jumbotron" id="jumboHome">
@@ -116,57 +116,33 @@
                     <div class="jumbotron">
                       <h1>Areas Covered</h1>             
                       <p>You can check if we cover your area in the search box below, or call us on 0203 123 4567 (example: "N13 5HD")</p>
+                      <form name="pcodeform" novalidate>
                       <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Your postcode..." id = "pcode_txt">
+                        <input type="text" class="form-control" ng-model="postcode" placeholder="Your postcode...(ex. N13 5HD)" id="postcode">
                         <span class="input-group-btn">
-                          <button class="btn btn-default" type="button" id = "pcode_btn">Go!</button>
+                          <button class="btn btn-default" type="submit" id = "pcode_btn" ng-click="checkPcode(pcodeform)">Go!</button>
                         </span>
                       </div><!-- /input-group -->
+                      </form>
                     </div>
-
-
-                    <script src="js/area_coordinates/postcodes.js"></script> 
-                    <script> 
-                      var search = document.getElementById("pcode_btn");
-                      var found = false;
-
-                      search.onclick = function() {        
-                        var pcode_txt = document.getElementById("pcode_txt").value;      
-                        for (i=0; i<postcodes.length; i++){        
-                          if (postcodes[i].valueOf().replace(" ", "") == pcode_txt.valueOf().replace(" ", "")) {
-                            found = true;            
-                          }              
-                        }
-                        if (found == false){
-                          alert("Sorry we do not cover your postcode at the moment, but get in touch with the office to see if we can add your area in the near future");
-                        } else {
-                          alert("Your area is covered by My Window Cleaner!");
-                        };
-                      };
-                    </script>  
-
                   </div>
                   <div class="col-md-8 col-sm-12">
                     <!-- <div id="map"></div> -->
-                    <div id="mwcMap" class="google-map" lat="51.618953" long="0.080216"></div>
-
+                    <div id="mwcMap" class="google-map" lat="51.618953" long="0.080216"></div>                    
                     <!-- polygon coordinates for Google Maps: -->
                     <script src="js/area_coordinates/encoord.js"></script>
                     <script src="js/area_coordinates/rmcoord.js"></script>
                     <script src="js/area_coordinates/eccoord.js"></script>
                     <script src="js/area_coordinates/igcoord.js"></script>
                     <script src="js/area_coordinates/ncoord.js"></script>
-                    <script src="js/area_coordinates/e_coord.js"></script>                 
-                    
+                    <script src="js/area_coordinates/e_coord.js"></script>
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABlmHVEqE46Jgh9fvERagzKHKUHK9P9B4&callback=initMap"
                     async defer></script>   
                   </div>
-
+                  <!-- for accordion: -->
                   <script type="text/javascript">  $('.collapse').on('shown.bs.collapse', function(){
                     $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
                   }).on('hidden.bs.collapse', function(){
                     $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
                   });
                 </script>
-
-
