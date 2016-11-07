@@ -64,7 +64,6 @@ mwcApp.controller('quoteformController', function($scope,$location, $anchorScrol
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   };
 });
-
 mwcApp.controller('homeController', function($scope, postcodeCheckService) {    
   $scope.pageClass = 'page-home';
 
