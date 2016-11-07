@@ -26,7 +26,7 @@ mwcApp.service('lazyLoadApi', function lazyLoadApi($window, $q) {
   mwcApp.service("postcodeCheckService", function($http, $q) 
   {  
     var deffered = $q.defer();
-    $http.get('area_coordinates/postcodes.json').then(function(data) 
+    $http.get('/area_coordinates/postcodes.json').then(function(data) 
     {      
       deffered.resolve(data);            
     });
