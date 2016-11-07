@@ -78,4 +78,3 @@ mwcApp.controller('homeController', function($scope, postcodeCheckService) {
     });
   };
 });
-//end
